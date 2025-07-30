@@ -54,7 +54,7 @@
           </a-form>
         </div>
         <div class="overlaylong-Signup" v-if="disfiex == 1">
-          <h2 class="overlaylongH2">Registered Account</h2>
+          <h2 class="overlaylongH2">Sign up</h2>
           <a-form
             style="max-width: 700px; margin: 0 auto"
             label-align="left"
@@ -235,7 +235,7 @@ html {
   overflow: hidden;
 }
 .center {
-  height: 88vh;
+  height: 82vh;
   background-image: url('https://gd-hbimg.huaban.com/9165dc3c0f8279ae5402d1f47212847bff68b49f3cb547-QEli8R');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -375,6 +375,8 @@ h1 {
 .overlaylongH2 {
   font-size: 25px;
   color: black;
+  margin-top: 20px;
+  text-align: center;
   /* width: 250px; */
 }
 
