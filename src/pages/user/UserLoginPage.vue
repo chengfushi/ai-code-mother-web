@@ -55,7 +55,7 @@
         </div>
         <div class="overlaylong-Signup" v-if="disfiex == 1">
           <h2 class="overlaylongH2">Sign up</h2>
-          <a-form
+          <a-formk
             style="max-width: 700px; margin: 0 auto"
             label-align="left"
             :label-col="{ span: 7 }"
@@ -119,7 +119,7 @@
             <a-form-item :wrapper-col="{ offset: 4, span: 20 }">
               <a-button type="primary" html-type="submit" class="inupbutton">注册</a-button>
             </a-form-item>
-          </a-form>
+          </a-formk>
         </div>
       </div>
       <div :class="overlaytitle">
