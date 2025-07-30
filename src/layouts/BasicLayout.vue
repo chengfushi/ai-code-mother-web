@@ -1,18 +1,20 @@
 <template>
   <div id="basicLayout">
-    <a-layout style="min-height: 100vh">
+    <a-layout style="min-height: 100vh; display: flex; flex-direction: column;">
       <a-layout-header class="header">
         <GlobalHeader />
       </a-layout-header>
 
-      <a-layout-content class="content"><router-view /></a-layout-content>
+      <a-layout-content class="content" style="flex: 1;">
+        <router-view />
+      </a-layout-content>
+
       <a-layout-footer class="footer">
         <div class="footer-container">
           <div class="footer-section">
             <h4>AI应用生成</h4>
             <p>专业的AI应用生成平台，为您提供智能化的解决方案。</p>
             <div class="social-links">
-              <!-- 将原生SVG图标替换为Ant Design Vue图标组件 -->
               <a href="https://github.com/chengfushi" target="_blank">
                 <GithubOutlined />
               </a>
@@ -36,72 +38,80 @@
     </a-layout>
   </div>
 </template>
-
 <script setup lang="ts">
-import GlobalHeader from '@/components/GlobalHeader.vue'
-import { GithubOutlined, BookOutlined } from '@ant-design/icons-vue'
+import GlobalHeader from "@/components/GlobalHeader.vue";
+import { GithubOutlined, BookOutlined } from "@ant-design/icons-vue";
 </script>
+
 <style scoped>
 #basicLayout .footer {
-  background: #ffffff;
-  padding: 16px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+  background: #1e1e1e;
+  color: #d9d9d9;
+  padding: 40px 20px 32px;
+  border-top: 1px solid #333;
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
-  color: #333;
+  gap: 32px;
 }
 
 .footer-section {
-  flex: 1;
-  padding: 0 20px;
-  background: #ffffff;
+  flex: 1 1 260px;
+  text-align: left;
 }
 
 .footer-section h4 {
-  color: #333;
-  margin-bottom: 12px;
+  color: #ffffff;
   font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .footer-section p {
-  color: #666;
-  margin-bottom: 8px;
   font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 6px;
 }
 
 .footer-section a {
-  color: #666;
+  color: #a3a3a3;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .footer-section a:hover {
-  color: #000;
+  color: #ffffff;
   text-decoration: underline;
 }
 
+/* 社交图标 */
+.social-links {
+  margin-top: 10px;
+}
+
 .social-links a {
-  margin: 0 8px;
-  color: #333;
+  margin-right: 12px;
+  color: #a3a3a3;
+  font-size: 20px;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .social-links a:hover {
-  color: #000;
+  color: #ffffff;
+  transform: scale(1.15);
 }
 
+/* 其余原有区域保持不动 */
 .content {
   background: linear-gradient(to right, #fefefe, #fff);
-  margin-bottom: 28px;
   padding: 20px;
 }
+
 .header {
   padding-inline: 20px;
   margin-bottom: 16px;
@@ -109,3 +119,4 @@ import { GithubOutlined, BookOutlined } from '@ant-design/icons-vue'
   background: white;
 }
 </style>
+
