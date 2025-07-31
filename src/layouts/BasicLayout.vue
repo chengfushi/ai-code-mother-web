@@ -1,11 +1,11 @@
 <template>
   <div id="basicLayout">
-    <a-layout style="min-height: 100vh; display: flex; flex-direction: column;">
+    <a-layout style="min-height: 100vh; display: flex; flex-direction: column">
       <a-layout-header class="header">
         <GlobalHeader />
       </a-layout-header>
 
-      <a-layout-content class="content" style="flex: 1;">
+      <a-layout-content class="content" style="flex: 1">
         <router-view />
       </a-layout-content>
 
@@ -24,7 +24,13 @@
             </div>
           </div>
           <div class="footer-section">
-            <h4>联系方式</h4>
+            <h4>产品服务</h4>
+            <p>智能对话</p>
+            <p>数据分析</p>
+            <p>API接口</p>
+          </div>
+          <div class="footer-section">
+            <h4>帮助与支持</h4>
             <p><a href="mailto:303623518@qq.com">303623518@qq.com</a></p>
             <p>武汉市中南民族大学</p>
           </div>
@@ -39,15 +45,15 @@
   </div>
 </template>
 <script setup lang="ts">
-import GlobalHeader from "@/components/GlobalHeader.vue";
-import { GithubOutlined, BookOutlined } from "@ant-design/icons-vue";
+import GlobalHeader from '@/components/GlobalHeader.vue'
+import { GithubOutlined, BookOutlined } from '@ant-design/icons-vue'
 </script>
 
 <style scoped>
 #basicLayout .footer {
   background: #1e1e1e;
   color: #d9d9d9;
-  padding: 40px 20px 32px;
+  padding: 40px 20px 15px;
   border-top: 1px solid #333;
 }
 
@@ -98,7 +104,9 @@ import { GithubOutlined, BookOutlined } from "@ant-design/icons-vue";
   margin-right: 12px;
   color: #a3a3a3;
   font-size: 20px;
-  transition: color 0.2s, transform 0.2s;
+  transition:
+    color 0.2s,
+    transform 0.2s;
 }
 
 .social-links a:hover {
@@ -119,4 +127,3 @@ import { GithubOutlined, BookOutlined } from "@ant-design/icons-vue";
   background: white;
 }
 </style>
-
