@@ -85,6 +85,11 @@ const originItems = [
     title: '用户管理',
   },
   {
+    key: '/admin/appManage',
+    label: '应用管理',
+    title: '应用管理',
+  },
+  {
     key: 'others',
     label: h('a', { href: 'https://chengfushi.blog.csdn.net/', target: '_blank' }, '个人博客'),
     title: '个人博客',
