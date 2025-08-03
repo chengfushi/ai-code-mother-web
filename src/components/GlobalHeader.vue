@@ -90,6 +90,11 @@ const originItems = [
     title: '应用管理',
   },
   {
+    key: '/admin/chatManage',
+    label: '对话管理',
+    title: '对话管理',
+  },
+  {
     key: 'others',
     label: h('a', { href: 'https://chengfushi.blog.csdn.net/', target: '_blank' }, '个人博客'),
     title: '个人博客',
