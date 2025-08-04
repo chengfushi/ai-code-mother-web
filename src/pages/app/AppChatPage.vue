@@ -16,7 +16,7 @@
           <template #icon>
             <CloudUploadOutlined />
           </template>
-          部署按钮
+          应用部署
         </a-button>
       </div>
     </div>
